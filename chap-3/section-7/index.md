@@ -1,12 +1,12 @@
 ---
-title: Preparing MD calculations in atomes
+title: Visual edition and model creation using atomes
 parent:  Features
 nav_order: 7
-date: 2025-04-08 15:14:31
+date: 2025-09-15 14:46:33
 maths: 1
 ---
 
-# Preparing MD calculations in atomes
+# Visual edition and model creation using atomes
 
 {% include chap-3/section-7/section-7.html %}
 

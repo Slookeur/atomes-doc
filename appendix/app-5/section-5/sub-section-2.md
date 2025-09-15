@@ -2,7 +2,7 @@
 title: Definitions
 parent:  Ring statistics
 nav_order: 2
-date: 2025-04-08 15:14:31
+date: 2025-09-15 14:46:33
 maths: 1
 ---
 

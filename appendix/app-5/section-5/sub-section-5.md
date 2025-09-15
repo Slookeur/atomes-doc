@@ -2,7 +2,7 @@
 title: Bond defects in ring statistics
 parent:  Ring statistics
 nav_order: 5
-date: 2025-04-08 15:14:31
+date: 2025-09-15 14:46:33
 maths: 1
 ---
 

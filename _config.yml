@@ -22,7 +22,7 @@ defaults:
       layout: "default"
 
 # logo: "/assets/images/atomes.svg" 
-#banner: "/assets/img/banner.png"
+# banner: "/assets/img/banner.png"
 favicon: "/assets/images/atomes.ico"
 
 # Enable or disable the site search

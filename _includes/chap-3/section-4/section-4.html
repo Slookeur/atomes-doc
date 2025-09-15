@@ -1,70 +1,21 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-<p><span><strong>atomes</strong></span> can compute the following structural characteristics of a 3D structure model:</p>
+<p>The "<span><code>User preferences</code></span>" dialog that can be opened via the "<span><code>Help</code></span>" menu of the main window allows to adjust <span><strong>atomes</strong></span> internal options for all projects to be opened in <span><strong>atomes</strong></span> workspace, configuration options include:</p>
 <ul>
-<li><p>Radial distribution functions g(r) (RDFs) {% cite AlTilde %} including <span class="math inline">\(^{\circ}\)</span>:</p>
-<ul>
-<li><p>Total RDFs for neutrons and X-rays.</p></li>
-<li><p>Partial RDFs.</p></li>
-<li><p>Bhatia-Thornton RDFs {% cite 2007JNCS..353.2959S %}</p></li>
+<li><p>Analysis option</p></li>
+<li><p>OpenGL rendering options</p></li>
+<li><p>Model atom(s), bond(s), label(s) and model box options</p></li>
+<li><p>Representation, projection, background, axis and selection options</p></li>
 </ul>
-<p><span class="math inline">\(^{\circ}\)</span> Radial distribution functions can be computed by i) direct real space calculation and/or ii) Fourier transforming of the structure factor calculated using the Debye formalism {% cite EurJM.14-233.2002 %}</p></li>
-<li><p>Structure factors S(q) {% cite EurJM.14-233.2002 %} including <span class="math inline">\(^{\circ\circ}\)</span>:</p>
-<ul>
-<li><p>Total structure factors S(q) for neutrons and X-rays.</p></li>
-<li><p>Total Q(q) {% cite EurJM.14-233.2002 jac.17-61.1984 %} for neutrons and X-rays.</p></li>
-<li><p>Partial S(q):</p>
-<ul>
-<li><p>Faber-Ziman {% cite PhilMag.11.153 %} partial S(q)</p></li>
-<li><p>Ashcroft-Langreth {% cite PhysRev.156.685 PhysRev.159.500 PhysRev.166.934.2 %} partial S(q)</p></li>
-<li><p>Bhatia-Thornton {% cite PhysRevB.2.3004 %} partial S(q)</p></li>
-</ul></li>
-</ul>
-<p><span class="math inline">\(^{\circ\circ}\)</span> Structure factors can be computed by i) Fourier transforming of the radial distribution functions and/or ii) using the Debye formalism {% cite EurJM.14-233.2002 %}</p></li>
-<li><p>Interatomic bond properties</p>
-<ul>
-<li><p>Coordination numbers</p></li>
-<li><p>Atomic near neighbor distribution</p></li>
-<li><p>Fraction of links between tetrahedra</p></li>
-<li><p>Fraction of tetrahedral units</p></li>
-<li><p>Bond lengths distribution for the first coordination sphere</p></li>
-</ul></li>
-<li><p>Distribution of Bond angles</p></li>
-<li><p>Distribution of Dihedral angles</p></li>
-<li><p>Ring statistics, according to several definitions:</p>
-<ul>
-<li><p>All closed paths (no rules)</p></li>
-<li><p>King’s rings {% cite Nature.213.1112 PhysRevB.44.4925 %}</p></li>
-<li><p>Guttman’s rings {% cite Guttman-116-145 %}</p></li>
-<li><p>Primitive rings {% cite Goetzke-127.215 YuanCormack-24-343 %} (or Irreducible {% cite Wooten-bk0109 %})</p></li>
-<li><p>Strong rings {% cite Goetzke-127.215 YuanCormack-24-343 %}</p></li>
-</ul>
-<p>And including options to:</p>
-<ul>
-<li><p>search only for ABAB rings</p></li>
-<li><p>exclude rings with homopolar bonds (A-A or B-B) from the analysis</p></li>
-</ul>
-<p>Ring statistics is presented according to the R.I.N.G.S. method {% cite RINGS %}.</p></li>
-<li><p>Chain statistics, including options to:</p>
-<ul>
-<li><p>search only for AAAA chains</p></li>
-<li><p>search only for ABAB chains</p></li>
-<li><p>exclude chains with homopolar bonds (A-A or B-B) from the analysis</p></li>
-<li><p>search only for 1-(2)<span class="math inline">\(_n\)</span>-1 chains</p></li>
-</ul></li>
-<li><p>Spherical harmonics invariant, <span class="math inline">\(Q_l\)</span>, as local atomic ordering symmetry identifiers {% cite PhysRevB.28.784 %}</p>
-<ul>
-<li><p>Average Q<span class="math inline">\(_l\)</span> for each chemical species</p></li>
-<li><p>Average Q<span class="math inline">\(_l\)</span> for a user specified structural unit</p></li>
-</ul></li>
-<li><p>Mean Square Displacement of atoms (MSD)</p>
-<ul>
-<li><p>Atomic species MSD</p></li>
-<li><p>Directional MSD (x, y, z, xy, xz, yz)</p></li>
-<li><p>Drift of the center of mass</p></li>
-</ul></li>
-</ul>
-<p>See appendix <a href="/atomes-doc/appendix/app-5/" data-reference-type="ref" data-reference="physics">5</a> to learn more about the physics and the chemistry behind these calculations.<br />
-<br />
-The calculations presented in this list can only be performed on the <span><em><span><strong>active</strong></span></em></span> project, ie. the project which name appears in the title bar of the <span><strong>atomes</strong></span> program main window, in bold font in the <span><strong>atomes</strong></span> workspace tree and in green bold font in the workspace information dialog [Fig. <a href="/atomes-doc/chap-1#overview" data-reference-type="ref" data-reference="overview">1.1</a>].<br />
-For more about running calculation using <span><strong>atomes</strong></span> see chapter <a href="/atomes-doc/chap-4/" data-reference-type="ref" data-reference="ana">4</a>.</p>
+<p>As illustrated in the next pages it is possible to configure the default behavior of several parts of the software.</p>
+<div id="prefs">
+<div align="center">
+<figure>
+<img src="/atomes-doc/img/main/prefs/prefs.png" id="prefs" style="width:17cm" alt="The &quot;User preferences&quot; dialog in the atomes program." />
+<figcaption aria-hidden="true"><strong><span>Figure 3.1:</span></strong> The "<span><code>User preferences</code></span>" dialog in the <span><strong>atomes</strong></span> program.</figcaption>
+<br /></figure>
+</div>
+</div>
+<p><br />
+When clicking on "<span><code>Apply</code></span>", and after confirmation, the options defined in the "<span><code>User preferences</code></span>" dialog are applied to the active session of <span><strong>atomes</strong></span>. Afterwards options can be stored in a XML file named "<span><code>atomes.pml</code></span>" (which exact location depends on your operating system), if found this file will be process at every <span><strong>atomes</strong></span> startup to ensure for user selected options to be used. Optionaly if projects are opened in <span><strong>atomes</strong></span> workspace it is possible to apply selected options to any of these projects.<br />
+Note that you can restore <span><strong>atomes</strong></span> default internal parameters at any time from the "<span><code>General</code></span>" tab.</p>

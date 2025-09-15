@@ -2,7 +2,7 @@
 title: Rings and connectivity&#58; the R.I.N.G.S. method implemented in atomes
 parent:  Ring statistics
 nav_order: 4
-date: 2025-04-08 15:14:31
+date: 2025-09-15 14:46:33
 maths: 1
 ---
 

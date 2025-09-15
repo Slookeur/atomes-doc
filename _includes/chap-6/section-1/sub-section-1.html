@@ -20,37 +20,44 @@
 </div>
 <p>The "<span><code>Crystal builder</code></span>" window [Fig. <a href="/atomes-doc/chap-6/section-1/sub-section-1#crwin" data-reference-type="ref" data-reference="crwin">6.3</a>] allows the creation of crystalline structure(s) and super-structure(s). Thus not only atom(s) but also molecules can be inserted to the crystalline positions defined by the space group.<br />
 The "<span><code>Select ...</code></span>" menu allows to insert objects: atoms, molecules, and atom selections from any other project opened in the <span><strong>atomes</strong></span> workspace. It will be presented in details in section <a href="/atomes-doc/chap-6/section-1/sub-section-2#replsel" data-reference-type="ref" data-reference="replsel">6.1.2.10</a>, at the exception of the "<span><code>Empty site</code></span>" button unique to the "<span><code>Crystal builder</code></span>" and that will be introduced in the next pages related to the occupancy.<br />
-Each object will be inserted at a position specified using the fractional coordinates, in the proportion of the occupancy, and following the rules of the selected space group. The following parameters can be adjusted:</p>
+Each object will be inserted at a position specified using the fractional coordinates, in the proportion of the occupancy, and following the rules of the selected space group.<br />
+The following parameters can be adjusted:</p>
 <ol>
 <li><p><span id="cs" label="cs"></span> The crystal system:<br />
 </p>
 <ul>
-<li><p>Triclinic</p></li>
+<li><p>Triclinic<br />
+</p></li>
 <li><p>Monoclinic</p></li>
 </ul>
 <ul>
-<li><p>Orthorhombic</p></li>
+<li><p>Orthorhombic<br />
+</p></li>
 <li><p>Tetragonal</p></li>
 </ul>
 <ul>
-<li><p>Trigonal</p></li>
+<li><p>Trigonal<br />
+</p></li>
 <li><p>Hexagonal</p></li>
 </ul>
 <ul>
 <li><p>Cubic</p></li>
 </ul></li>
-<li><p><span id="bv" label="bv"></span> The type of Bravais lattice, depending on <a href="#cs" data-reference-type="ref" data-reference="cs">[cs]</a>, among:<br />
+<li><p><span id="bv" label="bv"></span> The type of Bravais lattice, depending on <a href="#cs" data-reference-type="ref" data-reference="cs">[cs]</a>, in:<br />
 </p>
 <ul>
-<li><p>Primitive</p></li>
+<li><p>Primitive<br />
+</p></li>
 <li><p>Base-centered</p></li>
 </ul>
 <ul>
-<li><p>Body-centered</p></li>
+<li><p>Body-centered<br />
+</p></li>
 <li><p>Face-centered</p></li>
 </ul>
 <ul>
-<li><p>Hexagonal axes</p></li>
+<li><p>Hexagonal axes<br />
+</p></li>
 <li><p>Rhombohedral axes</p></li>
 </ul></li>
 <li><p><span id="sp" label="sp"></span> The space group, from 230 groups of the International tables for Crystallography Vol. A, {% cite IucrA %} and filtered using <a href="#cs" data-reference-type="ref" data-reference="cs">[cs]</a> and <a href="#bv" data-reference-type="ref" data-reference="bv">[bv]</a></p></li>
@@ -61,6 +68,8 @@ Each object will be inserted at a position specified using the fractional coordi
 <li><p>Vector components: <span><em><span>a</span></em></span>(x,y,z), <span><em><span>b</span></em></span>(x,y,z), <span><em><span>c</span></em></span>(x,y,z)</p></li>
 </ul></li>
 <li><p>The number of cell(s) to replicate on <span><strong><em>a</em></strong></span>, <span><strong><em>b</em></strong></span> and <span><strong><em>c</em></strong></span> to create the final supercell.</p></li>
+<li><p>If atomic coordinates are to be wrapped in the crystalline unit after building it.</p></li>
+<li><p>If clones are to be shown afer building the crytal.</p></li>
 <li><p>The object to insert to build the crystal using information specified at steps <a href="#cs" data-reference-type="ref" data-reference="cs">[cs]</a>, <a href="#bv" data-reference-type="ref" data-reference="bv">[bv]</a>, <a href="#sp" data-reference-type="ref" data-reference="sp">[sp]</a>, <a href="#sps" data-reference-type="ref" data-reference="sps">[sps]</a> and <a href="#lp" data-reference-type="ref" data-reference="lp">[lp]</a>, including the following options:</p>
 <ul>
 <li><p>The type of object (atom, molecule ...)</p></li>
@@ -75,7 +84,13 @@ Each object will be inserted at a position specified using the fractional coordi
 <li><p>"<span><code>Alternatively</code></span>": sites are filled alternatively: object A is inserted on the first position, object B is inserted on the second position, object A on the third position, object B on the fourth position ... and so on.</p></li>
 </ul>
 <p>In any case the number <span class="math inline">\(n(A)\)</span> of object(s) A to be inserted in calculated using: <span class="math display">\[n(A) = NP \times occ(A) \nonumber\]</span> <span class="math inline">\(NP\)</span> is the number of position(s) to fill, <span class="math inline">\(occ(A)\)</span> is the occupancy for object A.<br />
-<u>Overlapping</u>, object(s) on the same position, can also be allowed, the concept will be illustrated in the following examples.</p></li>
+Note that it is possible to adjust how the rounding is performed to determine occupancy:</p>
+<ul>
+<li><p>Lowest integer: <span class="math inline">\(\lfloor NP \times occ(A) \rfloor\)</span></p></li>
+<li><p>Highest integer: <span class="math inline">\(\lceil NP \times occ(A) \rceil\)</span></p></li>
+<li><p>Nearest integer: <span class="math inline">\(\lfloor NP \times occ(A) \rceil\)</span></p></li>
+</ul>
+<p><u>Overlapping</u>, object(s) on the same position, can also be allowed, the concept will be illustrated in the following examples.</p></li>
 </ul></li>
 </ol>
 <h5 class="unnumbered" id="using-the-crystal-builder-space-group-information">Using the crystal builder: space group information</h5>
@@ -118,15 +133,14 @@ In these examples the parameters to build the crystal remain exactly similar to 
 <p><img src="/atomes-doc/img/edit/builder/diam2cells.png" style="width:8cm" alt="image" /></p>
 </div>
 <ul>
-<li><p>Occupancy = 1.0:<br />
-</p>
+<li><p>Occupancy = 1.0:</p>
 <div align="center">
 <p><img src="/atomes-doc/img/edit/builder/diam2a.png" style="width:6cm" alt="image" /></p>
 </div>
 <p>With 8 atoms per cell, the total number of atoms in the system is equal to 16.</p></li>
 <li><p>Occupancy = 0.5:<br />
 </p>
-<p><img src="/atomes-doc/img/edit/builder/occup.png" style="width:17cm" alt="image" /><br />
+<p><img src="/atomes-doc/img/edit/builder/occup.png" style="width:14.5cm" alt="image" /><br />
 With an occupancy of 0.5 the number of atoms per cell will be reduced to 4,<br />
 and the total number of atoms in the system to 8.</p>
 <p><br />

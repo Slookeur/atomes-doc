@@ -1,13 +1,15 @@
 ---
-title: Analyzing models using atomes
+title: User preferences
 parent:  Features
 nav_order: 4
-date: 2025-04-08 15:14:31
+date: 2025-09-15 14:46:33
 maths: 1
 ---
 
-# Analyzing models using atomes
+# User preferences
+
 
 {% include chap-3/section-4/section-4.html %}
 
 {% bibliography --cited %}
+
